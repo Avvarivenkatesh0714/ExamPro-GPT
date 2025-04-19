@@ -1,0 +1,75 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+.container {
+    max-width: 291px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+    height: 307px;
+    margin-top: 155px;
+}
+.container1 {
+    max-width: 343px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+    height: 360px;
+    margin-top: 155px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 3px;
+    width: 100%;
+    padding: 10px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.redirect {
+    text-align: center;
+    margin-top: 15px;
+}
+
+  

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - ExamPro GPT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color:white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            margin-top: 35px;
+            
+        }
+
+        h2 {
+            color: #343a40;
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0 20px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            resize: vertical;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            color:black;
+            border: 2px solid black;
+        }
+
+        .answer-box {
+            background-color: #e9f7ef;
+            border-left: 6px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            color: #155724;
+            font-size: 16px;
+            white-space: pre-line;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .flashes {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .flashes li {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .flashes .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .flashes .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+       nav{
+        background-color: white;
+        padding: 2rem 2rem;
+        color: black;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        cursor: pointer;
+        height:30px;
+        box-shadow: 0 0 10px grey;
+        position:sticky;
+        top:0;
+       }
+
+       .dropdown{
+        width: 50%;
+        padding: 10px;
+        /* margin-right: 333px; */
+        align-items: center;
+        margin: 16px 67px 28px 192px;
+        border-radius: 8px;
+      }
+      .dropdown1{
+        width: 100%;
+        padding: 8px;
+        /* margin-right: 333px; */
+        align-items: center;
+        margin: 16px 67px 28px 192px;
+        border-radius: 8px;
+        height: 28px;
+        margin: 9px 37px 13px 5px;
+      }
+      .or-separator {
+        color: #888; /* Grey color for 'or' */
+        margin: 15px 0;
+        font-size: 0.9em;
+        text-transform: uppercase;
+    }
+    .nav-links{
+        display: flex;
+            gap: 2rem;
+    }
+    .footer {
+        text-align: center;
+        padding: 1rem;
+        background: white;
+        font-size: 0.9rem;
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        
+            <div class="logo">
+                <h1 style="    font-size: 33px;">ExamPro GPT </h1>
+            </div>
+            <div>
+                
+            </div>
+            <div class="nav-links" id="navLinks">
+             
+                <a href="/history" style="color:black;    margin-top: 22px;">History <i class="fa fa-history"></i>
+               <a href="/index" style="color:black;    margin-top: 22px;">Logout <i class="fa fa-arrow-circle-left"></i></a> 
+             
+            </div>
+       
+    </nav>
+    <h2 style="    float: left;
+    margin-left: 36px;
+    margin-top: 34px;" >Welcome, {{ session['username'] }}</h2> 
+    <div class="container">
+      
+        
+        
+        <form method="POST">
+            <center><h1>Ace your exams with AI-powered assistance</h1>
+            <p>Select an exam, ask a question and select category to get started.</p>
+        </center>
+           
+            <select name="exam" id="exam" required class="dropdown">
+                <option value="" disabled selected>Select an exam</option>
+                <option value="Central Govt Exam">Central Govt Exam</option>
+                <option value="NEET">NEET</option>
+                <option value="JEE">JEE</option>
+                <option value="State Board">State Board</option>
+                <option value="UPSC">UPSC</option>
+                <option value="SSC">SSC</option>
+                <option value="Bank Exams">Bank Exams</option>
+                <option value="Railway Exams">Railway Exams</option>
+                <option value="Others">Others</option>
+            </select>
+           
+            
+          
+            <textarea name="question" placeholder="Type question and select below to generate..." class="dropdown1" required></textarea>
+            <h2 style="float:left;">Generate:</h2> <br>
+            <center>
+              <button type="submit" name="action" value="answer">🔍 Explanation</button>
+              <button type="submit" name="action" value="summarize">🧠 Summarize</button>
+              <button type="submit" name="action" value="keywords">🧷 Keywords</button>
+              <button type="submit" name="action" value="solution">📝 Solution</button> <br> <br>
+              <button type="submit" name="action" value="concept">❓Concept </button>
+              <button type="submit" name="action" value="hint">💡Show Hint</button>
+              <button type="submit" name="action" value="translate">🌐 Translate</button>
+              <button type="submit" name="action" value="questions">✅ Questions</button>
+              <button type="submit" name="action" value="tips">🚀 Boost with Tips</button> <br> <br>
+              <button type="submit" name="action" value="shortnotes">🎯 Short notes</button>
+            </center>
+            
+        </form>
+        <hr>
+        {% if answer %}
+        <h3>Generated Answer:</h3>
+        <div class="answer-box">{{ answer|safe }}</div>
+        {% endif %}
+
+        <hr>
+
+      
+       
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+    </div><hr>
+    <footer class="footer">
+        <p>© 2025 ExamPro GPT | Built for Smart Learning</p>
+      </footer>
+</body>
+</html>

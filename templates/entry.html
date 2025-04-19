@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExamPro GPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+button a{
+    text-decoration:none;
+    color:white;
+}
+button a:hover{
+    color:black;
+}
+nav{
+    background-color: white;
+    padding: 2rem 2rem;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+    height:30px;
+    box-shadow: 0 0 10px grey;
+    position:sticky;
+    top:0;
+   }
+
+   .dropdown{
+    width: 50%;
+    padding: 10px;
+    /* margin-right: 333px; */
+    align-items: center;
+    margin: 16px 67px 28px 192px;
+    border-radius: 8px;
+  }
+  .dropdown1{
+    width: 100%;
+    padding: 8px;
+    /* margin-right: 333px; */
+    align-items: center;
+    margin: 16px 67px 28px 192px;
+    border-radius: 8px;
+    height: 28px;
+    margin: 9px 37px 13px 5px;
+  }
+  .or-separator {
+    color: #888; /* Grey color for 'or' */
+    margin: 15px 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+.nav-links{
+    display: flex;
+        gap: 2rem;
+}
+
+</style>
+</head>
+<body>
+    
+    <div class="container1">
+       <center> <h1>ExamPro GPT</h1></center> 
+       <img src="{{ url_for('static', filename='src/img1.png') }}" style="      margin-left: 76px;
+    width: 62%;margin-top: -30px;">
+           <h1 style="   font-weight: bold;
+    margin-top: -47px;
+    font-size: 22px;
+    margin-left: 47px;">Prepare for your exams</h1>
+        <P style="    text-align: center;">Select an exam, ask a question and select category to get started.</p>
+            <button type="submit" > <a href="/login" >Get Started <i class="fa fa-long-arrow-right"></i></a></button>
+        </form>
+    </div>
+</body>
+</html>

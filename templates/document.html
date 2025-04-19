@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation - ExamPro GPT</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color:white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 35px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .history-card {
+            background-color: #f1f3f5;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            color: #343a40;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .delete-btn:hover{
+            background-color:white;
+            color:black;
+            border:2px solid black;
+        }
+
+        .delete-all-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            float: right;
+        }
+        .delete-all-btn:hover{
+            background-color:white;
+            color:black;
+            border:2px solid black;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .history-card {
+                padding: 15px;
+            }
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        nav{
+            background-color: white;
+            padding: 2rem 2rem;
+            color: black;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            cursor: pointer;
+            height:30px;
+            box-shadow: 0 0 10px grey;
+            position:sticky;
+            top:0;
+           }
+    
+           .dropdown{
+            width: 50%;
+            padding: 10px;
+            /* margin-right: 333px; */
+            align-items: center;
+            margin: 16px 67px 28px 192px;
+            border-radius: 8px;
+          }
+          .dropdown1{
+            width: 100%;
+            padding: 8px;
+            /* margin-right: 333px; */
+            align-items: center;
+            margin: 16px 67px 28px 192px;
+            border-radius: 8px;
+            height: 28px;
+            margin: 9px 37px 13px 5px;
+          }
+          .or-separator {
+            color: #888; /* Grey color for 'or' */
+            margin: 15px 0;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        .nav-links{
+            display: flex;
+                gap: 2rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            font-size: 0.9rem;
+          }
+    </style>
+</head>
+<body>
+    <nav>
+        
+        <div class="logo">
+            <h1 style="    font-size: 33px;">ExamPro GPT </h1>
+        </div>
+        <div>
+            
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="/index" style="color:black;    margin-top: 22px;font-weight: normal;
+"><i class="fa fa-long-arrow-left"></i> Back to home </a>
+            
+        
+         
+        </div>
+   
+</nav>
+
+    <div class="container">
+        <h2 style="font-weight:bold;color: black;
+}">How ExamPro GPT Works?</h2> <hr>
+<img src="{{ url_for('static', filename='src/img2.png') }}" style="         margin-left: 75px;
+    width: 76%;
+    margin-top: 13px;">
+     
+
+     
+        
+    </div><hr>
+    <footer class="footer">
+        <p>© 2025 ExamPro GPT | Built for Smart Learning</p>
+      </footer>
+</body>
+</html>
+
